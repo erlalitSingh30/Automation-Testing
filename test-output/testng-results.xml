@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36593" started-at="2018-06-20T08:46:01Z" finished-at="2018-06-20T08:46:38Z">
+  <suite name="Default suite" duration-ms="42339" started-at="2018-06-22T06:12:07Z" finished-at="2018-06-22T06:12:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36593" started-at="2018-06-20T08:46:01Z" finished-at="2018-06-20T08:46:38Z">
+    <test name="Default test" duration-ms="42339" started-at="2018-06-22T06:12:07Z" finished-at="2018-06-22T06:12:50Z">
       <class name="testLoginPage.LoginPageTest">
-        <test-method status="PASS" signature="SetUpbrowser()[pri:0, instance:testLoginPage.LoginPageTest@457e2f02]" name="SetUpbrowser" is-config="true" duration-ms="30307" started-at="2018-06-20T14:16:01Z" finished-at="2018-06-20T14:16:32Z">
+        <test-method status="PASS" signature="SetUpbrowser()[pri:0, instance:testLoginPage.LoginPageTest@457e2f02]" name="SetUpbrowser" is-config="true" duration-ms="26824" started-at="2018-06-22T11:42:07Z" finished-at="2018-06-22T11:42:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUpbrowser -->
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:testLoginPage.LoginPageTest@457e2f02]" name="LoginTest" duration-ms="6257" started-at="2018-06-20T14:16:32Z" finished-at="2018-06-20T14:16:38Z">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:testLoginPage.LoginPageTest@457e2f02]" name="LoginTest" duration-ms="15474" started-at="2018-06-22T11:42:34Z" finished-at="2018-06-22T11:42:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->

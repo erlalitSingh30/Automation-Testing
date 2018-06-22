@@ -5,11 +5,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import dataprovider.ConfigFileReader;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;;
 
 public class LoginPage extends CommonVariables {
-CommonVariables C1 = new CommonVariables();
+//CommonVariables C1 = new CommonVariables();
+	ConfigFileReader cfg = new ConfigFileReader();
   WebDriver driver;
   @FindBy(xpath=".//*[@href='/account/login?ret=/']")
   WebElement LoginButton;
@@ -34,7 +38,7 @@ CommonVariables C1 = new CommonVariables();
   {
 	  //LoginButton.click();
 	  new Actions(driver).click(LoginButton).build().perform();
-	  new Actions(driver).sendKeys(UserID, C1.userID).build().perform();
+	  new Actions(driver).sendKeys(UserID, super.userID).build().perform();
 	  //UserID.click();
 	  //UserID.sendKeys(C1.userID);
   }
@@ -43,15 +47,15 @@ CommonVariables C1 = new CommonVariables();
   {
 	  //UserID.sendKeys(C1.password);
 	  new Actions(driver).click(Password).build().perform();
-	  driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-	  new Actions(driver).sendKeys(Password, C1.password).build().perform();;
+	  driver.manage().timeouts().implicitlyWait(cfg.getImplicitlyWait(), TimeUnit.SECONDS);
+	  new Actions(driver).sendKeys(Password, super.password).build().perform();;
   }
   ////Click on login button
   public void ClickLoginBtn()
   {
 	  //LoginBtn.click();
 	  new Actions(driver).sendKeys(Keys.ENTER).build().perform();
-	  //new Actions(driver).click(LoginButton).build().perform();
+	  new Actions(driver).click(LoginButton).build().perform();
   }
   public String getLoginTitle()
   {
@@ -72,7 +76,7 @@ CommonVariables C1 = new CommonVariables();
    */
   public void LoginToFlipkart()
   {
-	  //Fill Username
+	  //Fill username
 	  this.setUserID();
 	  //Fill Password
 	  this.setPassword();
